@@ -4,13 +4,24 @@
 #
 # CSCI 305 - Ruby Programming Lab
 #
-# <firstname> <lastname>
-# <email-address>
+# John Bemis
+# bidinc.33@gmail.com
 #
 ###############################################################
 
 $bigrams = Hash.new # The Bigram data structure
 $name = "<firstname> <lastname>"
+
+def clean_up_title(song_title)
+	pattern = /<SEP>[\w\s]*$/
+	if pattern =~ song_title
+		new_title = "#{$&}"
+	end
+	pattern2 = /<SEP>/
+	if pattern2 =~ new_title
+		final_title = "#{$'}"
+	end
+end
 
 # function to process each line of a file and extract the song titles
 def process_file(file_name)
