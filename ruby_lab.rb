@@ -13,6 +13,11 @@ $bigrams = Hash.new # The Bigram data structure
 $name = "<firstname> <lastname>"
 
 def clean_up_title(song_title)
+	extract(song_title)
+	elim_text(song_title)
+end
+
+def extract(song_title)
 	pattern = /<SEP>[\w\s]*$/
 	if pattern =~ song_title
 		new_title = "#{$&}"
@@ -21,6 +26,10 @@ def clean_up_title(song_title)
 	if pattern2 =~ new_title
 		final_title = "#{$'}"
 	end
+end
+
+def elim_text(song_title)
+	<SEP>[\w|\s]*(\(|\]|\))
 end
 
 # function to process each line of a file and extract the song titles
