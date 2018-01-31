@@ -29,7 +29,18 @@ def extract(song_title)
 end
 
 def elim_text(song_title)
-	<SEP>[\w|\s]*(\(|\]|\))
+	pattern = /<SEP>[\w|\s]*(\(|\[|\{|\\|\/|\_|\-|\:|\"|\`|\+|\=|\*|\ feat.)/
+	if pattern =~ song_title
+		second_title = "#{$`}"
+	end
+	second_pattern = /<SEP>/
+	if second_pattern =~ second_title
+		third_title = "#{$'}"
+	end
+	third_pattern = /(\(|\[|\{|\\|\/|\_|\-|\:|\"|\`|\+|\=|\*|\ feat.)/
+	if third_pattern =~ third_title
+		final_title = "#{$`}"
+	end
 end
 
 # function to process each line of a file and extract the song titles
