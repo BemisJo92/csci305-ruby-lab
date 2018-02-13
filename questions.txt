@@ -1,24 +1,72 @@
 Your name
 CSCI-305
 
-10.
+10. I tried "just", "for", and "the", and the problem that I see most often is
+that some words repeat, making the title very boring. Let's say that a word has
+the most common word following it as "of." Of has a most common word that follows
+it as "the," and the has the most common word as "world." World's most common word
+is "of" which starts the cycle over again. It gets stuck in a loop, creating a
+repeating song title.
 
-14.
+14. So many patterns devolve because the titles that they devolve into contain
+some of the most common words in the English language. Songwriters choose words
+that make sense to them, and most of the time, those words are very common. Out
+of a text file containing millions of songs, it would make sense that the most
+common word to follow some of the most common words in the English language
+are those that are also the most common, creating a loop.
 
-15.
+15. I could not find a single track in "uniquetracks.txt" that did not repeat for
+more than 20 words, but in "a_tracks.txt" I found the title "young dudes" that
+does not repeat. I think that in the unique tracks text file, there are too many
+song titles that contains a word that will repeat eventually. In the a tracks
+text file, there are not enough titles with words that are followed by words that
+ultimately repeat.
 
-16.
+16. At first, I tried to split the current title and put it into an array, and
+then use a nested for loop to try to see if any word in the array matched another.
+This didn't work and would only return one word long titles. So instead, I started
+storing every word (besides the start word) in an array, and every time I wanted
+add another word to the title, I would check if that word was already used. If it
+was, I would break and return the title that was already created.
 
-19.
+17. When I enter in Montana into the program with a_tracks, I get just Montana,
+and the same goes for when I use unique_tracks text file.
 
-20.
+18. When I enter Bob in while using the unique_tracks I get "bob mcgee me down
+road blues night long way you are", and when using a_tracks, I get "bob long
+as i want is you ready love".
 
-21.
+19. I did not get the same title, and this is because of the random select function
+when two most common words tie.
 
-22.
+20. I had a favorite song title that was "young dudes" that appeared when I was
+in the process of implementing some of the earlier functions, but that went away
+after I finished them. I think my favorite title after being finished is "leftover
+wine roses are you", which sounds like it would be a Taylor Swift song or something.
 
-23.
+21. I liked how simple Ruby was to create methods and run things. Java is pretty
+much the only other language I have coded in, besides C which I actually hated,
+so compared to that, I think Ruby was a lot simpler to implement and run, as well
+as all the cool things that I learned that Ruby could do, that I'm not entirely
+sure Java can do. If they can do the same things, I have been using Java for like
+three years now and I haven't heard about them, so if they do, hats off to you
+for teaching me something brand new in a language I had never touched. I also
+really liked how you can condense your code to one line if you want to. I never
+did because I was afraid I'd mess something up, but still I think it's a cool idea.
 
-24.
+22. I can't think of anything that I don't like about Ruby except for the fact
+that it is type-less and if you are reading someone else's code it is hard to
+know what a specific variable might be. It was also hard sometimes to understand
+the help online due to this (and the fact that a lot of people are really good at
+Ruby on the internet so they usually help using one-liners).
 
-25.
+23. I thought this lab was very challenging, and I enjoyed moving from step to
+step with a feeling of accomplishment. I didn't like, however, that if there was
+an error, I could not see which line it was on. It made debugging a lot harder,
+but I guess it helped me understand what my code was doing a little better.
+
+24. I worked on this lab about 10 hours.
+
+25. I really liked Ruby and I would definitely use it again. I'm not sure for
+which types of projects, however, because I never really touched the object-oriented
+side of Ruby. I would be interested to see how that would work. 
